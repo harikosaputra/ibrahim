@@ -3,6 +3,7 @@
 @section('title', 'Menu')
 @section('css')
 <link rel="stylesheet" href="/assets/compiled/css/table-datatable-jquery.css">
+<link rel="stylesheet" href="{{ asset('assets/css/customDataTables.css') }}">
 @endsection
 
 @section('content')
