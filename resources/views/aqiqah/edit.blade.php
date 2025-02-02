@@ -1,7 +1,5 @@
 @extends('template') <!-- Menggunakan layout template -->
 
-@section('title', 'Edit Aqiqah')
-
 @section('css')
 
 @endsection
@@ -25,20 +23,24 @@
             </div>
             <div class="card-body">
                 <div>
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" name="name" value="{{ old('name', $aqiqah->name) }}" required autocomplete="off">
-                </div><br>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" name="email" value="{{ old('email', $aqiqah->email) }}" required autocomplete="off">
+                    <label for="nama">Nama:</label>
+                    <input type="text" class="form-control" name="nama" value="{{ old('nama', $aqiqah->nama) }}" required autocomplete="off">
                 </div><br>
                 <div>
                     <label for="phone">Phone:</label>
                     <input type="text" class="form-control" name="phone" value="{{ old('phone', $aqiqah->phone) }}" required autocomplete="off">
                 </div><br>
                 <div>
-                    <label for="address">Address:</label>
-                    <textarea class="form-control" name="address" required autocomplete="off">{{ old('address', $aqiqah->address) }}</textarea>
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" value="{{ old('email', $aqiqah->email) }}" required autocomplete="off">
+                </div><br>
+                <div>
+                    <label for="lokasi">Lokasi:</label>
+                    <input type="text" class="form-control" name="lokasi" value="{{ old('lokasi', $aqiqah->lokasi) }}" required autocomplete="off">
+                </div><br> 
+                <div>
+                    <label for="link">Link:</label>
+                    <input type="text" class="form-control" name="link" value="{{ old('link', $aqiqah->link) }}" required autocomplete="off">
                 </div><br>
             </div>
         </div>
