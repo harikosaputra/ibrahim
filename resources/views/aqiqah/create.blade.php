@@ -6,7 +6,6 @@
         color:red;
     }
 </style>
-
 @endsection
 
 @section('content')

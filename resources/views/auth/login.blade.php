@@ -131,6 +131,7 @@
             padding: 10px 20px; /* Menyesuaikan padding agar tombol tetap proporsional */
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -155,11 +156,18 @@
                 <div id="auth-left" class="form-container">
                     <h5 class="auth-title mb-4">Welcome to Ibrahim Group</h5>
 
-                    <!-- Menampilkan alert error jika ada -->
-                    @if(session('message'))
-                        <div class="alert alert-danger">
-                            {{ session('message') }}
-                        </div>
+                    @if(session('login_error'))
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Login Gagal!',
+                                    text: '{{ session('login_error') }}',
+                                    confirmButtonColor: '#d33',
+                                    confirmButtonText: 'Coba Lagi'
+                                });
+                            });
+                        </script>
                     @endif
 
                     <form action="{{ route('login') }}" method="POST">
@@ -169,18 +177,12 @@
                         <div class="form-group mb-4">
                             <label for="email" class="form-label">Email</label>
                             <input type="text" class="form-control form-control-xl" placeholder="Email" name="email" id="email">
-                            {{-- <div class="form-control-icon">
-                                <i class="bi bi-person"></i>
-                            </div> --}}
                         </div>
 
                         <!-- Label dan input password -->
                         <div class="form-group  mb-4">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control form-control-xl" placeholder="Password" name="password" id="password">
-                            {{-- <div class="form-control-icon">
-                                <i class="bi bi-shield-lock"></i>
-                            </div> --}}
                         </div>
 
                         <!-- Ceklis Remember Me -->

@@ -8,6 +8,41 @@
 </style>
 @endsection
 
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @if(session('success'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sukses!',
+                    text: '{{ session('success') }}',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                });
+            });
+        </script>
+
+        {{-- <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sukses!',
+                    text: '{{ session('success') }}',
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK',
+                    timer: 1000, // Alert akan otomatis hilang dalam 3 detik (3000ms)
+                    timerProgressBar: true, // Menampilkan progress bar pada alert
+                    showConfirmButton: false // Menghilangkan tombol OK agar otomatis tertutup
+                });
+            });
+        </script> --}}
+    @endif
+
+    <script src="/assets/extensions/jquery/jquery.min.js"></script>
+@endsection
+
 @section('content')
 <section class="section">
     <div class="card shadow">
