@@ -1,4 +1,7 @@
 @extends('template') <!-- Menggunakan layout template -->
+@php
+    $pageTitle = 'Edit Aqiqah';
+@endphp
 
 @section('css')
 

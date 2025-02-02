@@ -1,4 +1,7 @@
 @extends('template') <!-- Menggunakan layout app.blade.php -->
+@php
+    $pageTitle = 'Add Aqiqah';
+@endphp
 
 @section('css')
 <style>

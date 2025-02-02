@@ -1,4 +1,7 @@
 @extends('template') 
+@php
+    $pageTitle = 'Views Aqiqah';
+@endphp
 
 @section('css')
 <link rel="stylesheet" href="/assets/compiled/css/table-datatable-jquery.css">
