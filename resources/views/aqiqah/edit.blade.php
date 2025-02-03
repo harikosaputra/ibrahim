@@ -1,6 +1,6 @@
 @extends('template') <!-- Menggunakan layout template -->
 
-@section('title', 'Update tes Aqiqah')
+@section('title', 'Edit Aqiqah')
 
 @section('css')
 
