@@ -1,7 +1,6 @@
 @extends('template') <!-- Menggunakan layout template -->
-@php
-    $pageTitle = 'Edit Aqiqah';
-@endphp
+
+@section('title', 'Update Aqiqah')
 
 @section('css')
 
